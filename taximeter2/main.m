@@ -10,8 +10,11 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World22333332!");
+        printf("Welcome to Taximeter application! Please choose 1 of the following options:");
+        printf("\n1.Pick up passengers");
+        printf("\n2.Fill up the gas tank\n");
+        
+        
     }
     return 0;
 }

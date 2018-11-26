@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:taximeter2.xcodeproj">
+      location = "self:/Users/minhle/Desktop/Lassale/taximeter2/taximeter.xcodeproj">
    </FileRef>
 </Workspace>

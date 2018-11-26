@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		029D3B2321AC8B4F002C89F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 029D3B2221AC8B4F002C89F6 /* main.m */; };
+		029D3B2A21AC8F70002C89F6 /* pickup.m in Sources */ = {isa = PBXBuildFile; fileRef = 029D3B2921AC8F70002C89F6 /* pickup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		029D3B1F21AC8B4F002C89F6 /* taximeter2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = taximeter2; sourceTree = BUILT_PRODUCTS_DIR; };
+		029D3B1F21AC8B4F002C89F6 /* taximeter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = taximeter; sourceTree = BUILT_PRODUCTS_DIR; };
 		029D3B2221AC8B4F002C89F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		029D3B2921AC8F70002C89F6 /* pickup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pickup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +51,7 @@
 		029D3B2021AC8B4F002C89F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				029D3B1F21AC8B4F002C89F6 /* taximeter2 */,
+				029D3B1F21AC8B4F002C89F6 /* taximeter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				029D3B2221AC8B4F002C89F6 /* main.m */,
+				029D3B2921AC8F70002C89F6 /* pickup.m */,
 			);
 			path = taximeter2;
 			sourceTree = "<group>";
@@ -65,9 +68,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		029D3B1E21AC8B4F002C89F6 /* taximeter2 */ = {
+		029D3B1E21AC8B4F002C89F6 /* taximeter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 029D3B2621AC8B4F002C89F6 /* Build configuration list for PBXNativeTarget "taximeter2" */;
+			buildConfigurationList = 029D3B2621AC8B4F002C89F6 /* Build configuration list for PBXNativeTarget "taximeter" */;
 			buildPhases = (
 				029D3B1B21AC8B4F002C89F6 /* Sources */,
 				029D3B1C21AC8B4F002C89F6 /* Frameworks */,
@@ -77,9 +80,9 @@
 			);
 			dependencies = (
 			);
-			name = taximeter2;
+			name = taximeter;
 			productName = taximeter2;
-			productReference = 029D3B1F21AC8B4F002C89F6 /* taximeter2 */;
+			productReference = 029D3B1F21AC8B4F002C89F6 /* taximeter */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +99,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 029D3B1A21AC8B4F002C89F6 /* Build configuration list for PBXProject "taximeter2" */;
+			buildConfigurationList = 029D3B1A21AC8B4F002C89F6 /* Build configuration list for PBXProject "taximeter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,7 +111,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				029D3B1E21AC8B4F002C89F6 /* taximeter2 */,
+				029D3B1E21AC8B4F002C89F6 /* taximeter */,
 			);
 		};
 /* End PBXProject section */
@@ -119,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				029D3B2321AC8B4F002C89F6 /* main.m in Sources */,
+				029D3B2A21AC8F70002C89F6 /* pickup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +259,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		029D3B1A21AC8B4F002C89F6 /* Build configuration list for PBXProject "taximeter2" */ = {
+		029D3B1A21AC8B4F002C89F6 /* Build configuration list for PBXProject "taximeter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				029D3B2421AC8B4F002C89F6 /* Debug */,
@@ -264,7 +268,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		029D3B2621AC8B4F002C89F6 /* Build configuration list for PBXNativeTarget "taximeter2" */ = {
+		029D3B2621AC8B4F002C89F6 /* Build configuration list for PBXNativeTarget "taximeter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				029D3B2721AC8B4F002C89F6 /* Debug */,
