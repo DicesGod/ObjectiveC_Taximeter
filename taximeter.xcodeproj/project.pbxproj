@@ -27,6 +27,7 @@
 		029D3B1F21AC8B4F002C89F6 /* taximeter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = taximeter; sourceTree = BUILT_PRODUCTS_DIR; };
 		029D3B2221AC8B4F002C89F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		029D3B2921AC8F70002C89F6 /* pickup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pickup.m; sourceTree = "<group>"; };
+		02F4B18E21B4A3380077D765 /* pickup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pickup.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +44,7 @@
 		029D3B1621AC8B4F002C89F6 = {
 			isa = PBXGroup;
 			children = (
-				029D3B2121AC8B4F002C89F6 /* taximeter2 */,
+				029D3B2121AC8B4F002C89F6 /* taximeter */,
 				029D3B2021AC8B4F002C89F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,13 +57,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		029D3B2121AC8B4F002C89F6 /* taximeter2 */ = {
+		029D3B2121AC8B4F002C89F6 /* taximeter */ = {
 			isa = PBXGroup;
 			children = (
 				029D3B2221AC8B4F002C89F6 /* main.m */,
 				029D3B2921AC8F70002C89F6 /* pickup.m */,
+				02F4B18E21B4A3380077D765 /* pickup.h */,
 			);
-			path = taximeter2;
+			path = taximeter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
