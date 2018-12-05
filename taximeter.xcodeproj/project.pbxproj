@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		029D3B2321AC8B4F002C89F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 029D3B2221AC8B4F002C89F6 /* main.m */; };
-		029D3B2A21AC8F70002C89F6 /* pickup.m in Sources */ = {isa = PBXBuildFile; fileRef = 029D3B2921AC8F70002C89F6 /* pickup.m */; };
+		029D3B2A21AC8F70002C89F6 /* Pickup.m in Sources */ = {isa = PBXBuildFile; fileRef = 029D3B2921AC8F70002C89F6 /* Pickup.m */; };
+		02F4B19121B837E30077D765 /* Gastank.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4B19021B837E30077D765 /* Gastank.m */; };
+		02F4B19421B839500077D765 /* Information.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4B19321B839500077D765 /* Information.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +28,12 @@
 /* Begin PBXFileReference section */
 		029D3B1F21AC8B4F002C89F6 /* taximeter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = taximeter; sourceTree = BUILT_PRODUCTS_DIR; };
 		029D3B2221AC8B4F002C89F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		029D3B2921AC8F70002C89F6 /* pickup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pickup.m; sourceTree = "<group>"; };
-		02F4B18E21B4A3380077D765 /* pickup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pickup.h; sourceTree = "<group>"; };
+		029D3B2921AC8F70002C89F6 /* Pickup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pickup.m; sourceTree = "<group>"; };
+		02F4B18E21B4A3380077D765 /* Pickup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pickup.h; sourceTree = "<group>"; };
+		02F4B18F21B834640077D765 /* Gastank.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gastank.h; sourceTree = "<group>"; };
+		02F4B19021B837E30077D765 /* Gastank.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gastank.m; sourceTree = "<group>"; };
+		02F4B19221B8393F0077D765 /* Information.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Information.h; sourceTree = "<group>"; };
+		02F4B19321B839500077D765 /* Information.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Information.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				029D3B2221AC8B4F002C89F6 /* main.m */,
-				029D3B2921AC8F70002C89F6 /* pickup.m */,
-				02F4B18E21B4A3380077D765 /* pickup.h */,
+				029D3B2921AC8F70002C89F6 /* Pickup.m */,
+				02F4B18E21B4A3380077D765 /* Pickup.h */,
+				02F4B18F21B834640077D765 /* Gastank.h */,
+				02F4B19021B837E30077D765 /* Gastank.m */,
+				02F4B19221B8393F0077D765 /* Information.h */,
+				02F4B19321B839500077D765 /* Information.m */,
 			);
 			path = taximeter;
 			sourceTree = "<group>";
@@ -124,7 +134,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				029D3B2321AC8B4F002C89F6 /* main.m in Sources */,
-				029D3B2A21AC8F70002C89F6 /* pickup.m in Sources */,
+				029D3B2A21AC8F70002C89F6 /* Pickup.m in Sources */,
+				02F4B19421B839500077D765 /* Information.m in Sources */,
+				02F4B19121B837E30077D765 /* Gastank.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

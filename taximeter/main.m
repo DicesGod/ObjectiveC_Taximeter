@@ -1,4 +1,18 @@
 #import <Foundation/Foundation.h>
+#import "Pickup.h"
+
+int validation(int userInput)
+{
+    while (userInput != 1 && userInput != 2)
+    {
+        printf("Please input invalid value (1 or 2): ");
+        fflush(stdin);
+        scanf("%d",&userInput);
+        
+        //printf("Day la userinput %s",&userInput);
+    }
+    return userInput;
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -7,24 +21,30 @@ int main(int argc, const char * argv[]) {
         printf("\n2.Fill up the gas tank\n");
         printf("\n");
         
-        char userInput;
-        scanf("%s",&userInput);
-        //check inputed value
-        while (userInput != '1' && userInput !='2')
-            {
-                printf("Please input invalid value (1 or 2): ");
-                scanf("%s",&userInput);
-            }
+        int userInput;
+        scanf("%d",&userInput);
+        
+        
+      //  fflush(stdin);
+        userInput = validation(userInput);
+        //printf("Day la userinput %s",&userInput);
         
         if (userInput == 1)
         {
             
+            Pickup* pickup = [[Pickup alloc] init];
+            
+            fflush(stdin);
+            [pickup Menu];
+            [pickup Calculate];
         }
         
-        if (userInput == 2)
+        if (userInput == '2')
         {
             
         }
     }
     return 0;
 }
+
+
