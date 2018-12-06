@@ -9,5 +9,13 @@
 #ifndef Information_h
 #define Information_h
 
+@interface Information : NSObject {
+
+}
+
+-(id)Menu:(float)netincom :(float)fuellevel :(float)mileage :(int)totaltrip;
+
+
+@end
 
 #endif /* Information_h */

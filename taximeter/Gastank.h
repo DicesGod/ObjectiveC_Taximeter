@@ -2,15 +2,11 @@
 #define Gastank_h
 
 @interface Gastank : NSObject {
-    float shour;
-    float smin;
-    float ehour;
-    float emin;
-    float inispeed;
+    
 }
 
--(id)Menu;
--(void)Calculate;
+-(void)Fillup:(float *)fuellevel :(float *)netincome;
+-(void)Onsitegas:(float *)fuellevel :(float *)netincome;
 
 @end
 
