@@ -6,18 +6,36 @@
 
 -(id)Menu{
     printf("Please input the start time:" );
-    fflush(stdin);
-    scanf("%fh%f", &shour, &smin);
+    fpurge(stdin);
+    int checkscan = scanf("%f:%f", &shour, &smin);
+    while (checkscan == 0)
+    {
+        printf("Please input the correct format(HH:MM):");
+        fpurge(stdin);
+        checkscan = scanf("%f:%f", &shour, &smin);
+    }
+   
     
     printf("Please input the end time:" );
-    fflush(stdin);
-    scanf("%fh%f", &ehour, &emin);
+    fpurge(stdin);
+    checkscan = scanf("%f:%f", &ehour, &emin);
+    while (checkscan == 0)
+    {
+        printf("Please input the correct format(HH:MM):");
+        fpurge(stdin);
+        checkscan = scanf("%f:%f", &ehour, &emin);
+    }
     
     printf("Please input the initial speed:" );
-    fflush(stdin);
-    scanf("%f",&inispeed);
-    
-    //time = [NSDateInterval c];
+    fpurge(stdin);
+    checkscan = scanf("%f",&inispeed);
+    while (checkscan == 0)
+    {
+        printf("Please input the valid intial speed:");
+        fpurge(stdin);
+        checkscan = scanf("%f",&emin);
+    }
+ 
     
     //printf("%dh%d,%dh%d,%dkm/h",shour,smin,ehour,emin,inispeed);
     return self;
@@ -199,6 +217,11 @@
             printf("A single trip cannot take more than 12 hours!\n");
             [self Menu];
         }
+        while (shour == ehour)
+        {
+            printf("End time should be larger than start time! Please try again!\n");
+            [self Menu];
+        }
         ///////////////Case1
          if((0 <= shour) && (shour < 8) && (0 <= ehour) && (ehour < 8) && shour < ehour)
         {
@@ -261,26 +284,37 @@
     }
      printf("\n\n");
     *fuellevel = *fuellevel - (time * fabs(tan(inispeed*time))+fabs(cos(inispeed)));
-//    if (*fuellevel <= 0)
-//    {
-////        printf("\n1.Fuel: %f", *fuellevel);
-////        printf("\n1.Income: %f\n", *netincome);
-////        float a; ;
-////        float b;
-////        a = *netincome;
-////        b = *fuellevel;
-////        Gastank* gastank = [[Gastank alloc] init];
-////        [gastank Onsitegas:&a :&b];
-////     //   *fuellevel = 0;
-//    }
-//    else
-//    {
+    if (*fuellevel <= 0)
+    {
+        //printf("\n1.Fuel: %f", *fuellevel);
+        //printf("\n1.Income: %f\n", *netincome);
+//        float a; ;
+//        float b;
+//        a = *netincome+cost;
+//        b = *fuellevel;
+//        Gastank* gastank = [[Gastank alloc] init];
+//        [gastank Onsitegas:&b :&a];
+//        *mileage = *mileage + pow(inispeed,(2 * time)) - ((inispeed) * time);
+//        *netincome = a;
+//        *fuellevel = b;
+//        *totaltrip = *totaltrip+1;
+
+        Gastank* gastank = [[Gastank alloc] init];
+        [gastank Onsitegas:&*fuellevel :&*netincome];
+        *mileage = *mileage + pow(inispeed,(2 * time)) - ((inispeed) * time);
+        *netincome = *netincome+cost;
+        //*fuellevel = b;
+        *totaltrip = *totaltrip+1;
+
+    }
+    else
+    {
     //double a = time * fabs(tan(inispeed*time))+fabs(cos(inispeed));
     //printf("used: %f \n",a);
     *mileage = *mileage + pow(inispeed,(2 * time)) - ((inispeed) * time);
     *netincome = *netincome + cost;
     *totaltrip = *totaltrip+1;
-   // }
+    }
     
 }
 
