@@ -5,6 +5,7 @@
 @implementation Pickup
 
 -(id)Menu{
+    
     printf("Please input the start time:" );
     fpurge(stdin);
     int checkscan = scanf("%f:%f", &shour, &smin);
@@ -41,14 +42,6 @@
     return self;
 }
 
-//-(float)getNetincome:(float)netincome
-//{
-//    netincome = Calculate
-//}
-//-(float)getFuellevel:(float) fuellevel;
-//-(float)getMileage:(float) mileage;
-//-(float)getTotaltrip:(int) totaltrip;
-
 -(void)Calculate:(float *)netincome :(float *)fuellevel :(float *)mileage :(int *)totaltrip 
 {
     float time=0;
@@ -57,6 +50,12 @@
     float s2 = (60-smin)/60;
     float e = emin/60;
 
+    printf("%f",shour);
+    printf("%f",ehour);
+    printf("%f",smin);
+    printf("%f",emin);
+   
+    
      if(smin > emin){
          while (shour + 12 < ehour)
          {
@@ -286,19 +285,6 @@
     *fuellevel = *fuellevel - (time * fabs(tan(inispeed*time))+fabs(cos(inispeed)));
     if (*fuellevel <= 0)
     {
-        //printf("\n1.Fuel: %f", *fuellevel);
-        //printf("\n1.Income: %f\n", *netincome);
-//        float a; ;
-//        float b;
-//        a = *netincome+cost;
-//        b = *fuellevel;
-//        Gastank* gastank = [[Gastank alloc] init];
-//        [gastank Onsitegas:&b :&a];
-//        *mileage = *mileage + pow(inispeed,(2 * time)) - ((inispeed) * time);
-//        *netincome = a;
-//        *fuellevel = b;
-//        *totaltrip = *totaltrip+1;
-
         Gastank* gastank = [[Gastank alloc] init];
         [gastank Onsitegas:&*fuellevel :&*netincome];
         *mileage = *mileage + pow(inispeed,(2 * time)) - ((inispeed) * time);
@@ -309,8 +295,6 @@
     }
     else
     {
-    //double a = time * fabs(tan(inispeed*time))+fabs(cos(inispeed));
-    //printf("used: %f \n",a);
     *mileage = *mileage + pow(inispeed,(2 * time)) - ((inispeed) * time);
     *netincome = *netincome + cost;
     *totaltrip = *totaltrip+1;
@@ -320,3 +304,5 @@
 
 
 @end
+
+

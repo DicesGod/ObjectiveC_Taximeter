@@ -2,6 +2,7 @@
 #import "Pickup.h"
 #import "Information.h"
 #import "Gastank.h"
+#import "Test.m"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -31,7 +32,7 @@ int main(int argc, const char * argv[]) {
             printf("\n1.Pick up passengers");
             printf("\n2.Fill up the gas tank\n");
             printf("\n");
-            fflush(stdin);
+            fpurge(stdin);
             int userInput;
             check_scan = scanf("%d",&userInput);
             while(check_scan==0 || (userInput != 1 && userInput != 2))
@@ -42,12 +43,13 @@ int main(int argc, const char * argv[]) {
                 
             }
 
+
             if (userInput == 1)
             {
                 
                 Pickup* pickup = [[Pickup alloc] init];
                 
-                fflush(stdin);
+                fpurge(stdin);
                 [pickup Menu];
                 [pickup Calculate:&netincome :&fuellevel :&mileage :&totaltrip];
                 [info  Menu:netincome :fuellevel :mileage :totaltrip];
@@ -55,16 +57,17 @@ int main(int argc, const char * argv[]) {
             
             if (userInput == 2)
             {
-                if(netincome >=0 && fuellevel >0){
-                    Gastank* gastank = [[Gastank alloc] init];
-                    [gastank Fillup:&fuellevel :&netincome];
-                    [info  Menu:netincome :fuellevel :mileage :totaltrip];
-                }
-                else
-                {
-                    printf("YOU DO NOT HAVE ENOUGH MONEY AND FUEL! PLEASE RESTART THE APPLICATION!");
-                }
-               
+//                if(netincome >=0 && fuellevel >0){
+//                    Gastank* gastank = [[Gastank alloc] init];
+//                    [gastank Fillup:&fuellevel :&netincome];
+//                    [info  Menu:netincome :fuellevel :mileage :totaltrip];
+//                }
+//                else
+//                {
+//                    printf("YOU DO NOT HAVE ENOUGH MONEY AND FUEL! PLEASE RESTART THE APPLICATION!");
+//                }
+//                Test* test = [[Test alloc] init];
+//                [test Calculate:&netincome :&fuellevel :&mileage :&totaltrip];
             }
         }
         while(quit !=0);
