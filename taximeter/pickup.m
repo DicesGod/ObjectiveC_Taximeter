@@ -6,27 +6,43 @@
 
 -(id)Menu{
     
-    printf("Please input the start time:" );
+    printf("Please input the start time(hh:mm) - 24h must be write as 0:" );
     fpurge(stdin);
     int checkscan = scanf("%f:%f", &shour, &smin);
-    while (checkscan == 0)
+    while (checkscan != 2 || (shour < 0 || shour > 23) || (smin < 0 || smin>59))
     {
-        printf("Please input the correct format(HH:MM):");
+        printf("Please input the correct format for start time(hh:mm) - 24h must be write as 0:");
         fpurge(stdin);
         checkscan = scanf("%f:%f", &shour, &smin);
     }
-   
+    // For learning purpose only,for using NSTimeInterval user must input date values so I decided to use another algorithm (long but more convience for users.
+    NSString *starhour = [NSString stringWithFormat:@"%.0f:%.0f",shour,smin];
+    //printf("%s", [starhour UTF8String]);
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm"];
+    NSDate *startDate = [[NSDate alloc] init];
+    startDate = [dateFormatter dateFromString:starhour];
+   // NSLog(@"Start date is %@",[dateFormatter stringFromDate:startDate]);
     
-    printf("Please input the end time:" );
+    printf("Please input the end time(hh:mm) - 24h must be write as 0:" );
     fpurge(stdin);
     checkscan = scanf("%f:%f", &ehour, &emin);
-    while (checkscan == 0)
+    while (checkscan != 2 || (ehour < 0 || ehour > 23) || (emin < 0 || emin>59))
     {
-        printf("Please input the correct format(HH:MM):");
+        printf("Please input the correct format for start time(hh:mm) - 24h must be write as 0:");
         fpurge(stdin);
         checkscan = scanf("%f:%f", &ehour, &emin);
     }
     
+    NSString *endhour = [NSString stringWithFormat:@"%.0f:%.0f",ehour,emin];
+    [dateFormatter setDateFormat:@"HH:mm"];
+    NSDate *endDate = [dateFormatter dateFromString:endhour];
+    //endDate = [dateFormatter dateFromString:endhour];
+    
+    NSTimeInterval timeDifference = [endDate timeIntervalSinceDate:startDate];
+  //  NSLog(@"End date is %@",[dateFormatter stringFromDate:endDate]);
+    NSLog(@"Time defferences: %.2fh",timeDifference/60-15);
+   // NSLog(@"Time defferences2: %.2fh",timeDifference/36);
     printf("Please input the initial speed:" );
     fpurge(stdin);
     checkscan = scanf("%f",&inispeed);
@@ -36,9 +52,6 @@
         fpurge(stdin);
         checkscan = scanf("%f",&emin);
     }
- 
-    
-    //printf("%dh%d,%dh%d,%dkm/h",shour,smin,ehour,emin,inispeed);
     return self;
 }
 
@@ -50,11 +63,8 @@
     float s2 = (60-smin)/60;
     float e = emin/60;
 
-    printf("%f",shour);
-    printf("%f",ehour);
-    printf("%f",smin);
-    printf("%f",emin);
-   
+   // printf("This is startDate: %s\n",&startDate);
+   // printf("This is endDate: %s\n",&endDate);
     
      if(smin > emin){
          while (shour + 12 < ehour)

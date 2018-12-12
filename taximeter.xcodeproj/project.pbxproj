@@ -11,7 +11,6 @@
 		029D3B2A21AC8F70002C89F6 /* Pickup.m in Sources */ = {isa = PBXBuildFile; fileRef = 029D3B2921AC8F70002C89F6 /* Pickup.m */; };
 		02F4B19121B837E30077D765 /* Gastank.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4B19021B837E30077D765 /* Gastank.m */; };
 		02F4B19421B839500077D765 /* Information.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4B19321B839500077D765 /* Information.m */; };
-		02F8C54D21BB5E9300C5491C /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F8C54C21BB5E9300C5491C /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +34,6 @@
 		02F4B19021B837E30077D765 /* Gastank.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gastank.m; sourceTree = "<group>"; };
 		02F4B19221B8393F0077D765 /* Information.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Information.h; sourceTree = "<group>"; };
 		02F4B19321B839500077D765 /* Information.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Information.m; sourceTree = "<group>"; };
-		02F8C54C21BB5E9300C5491C /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +72,6 @@
 				02F4B18F21B834640077D765 /* Gastank.h */,
 				02F4B19021B837E30077D765 /* Gastank.m */,
 				02F4B19221B8393F0077D765 /* Information.h */,
-				02F8C54C21BB5E9300C5491C /* Test.m */,
 				02F4B19321B839500077D765 /* Information.m */,
 			);
 			path = taximeter;
@@ -136,7 +133,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F8C54D21BB5E9300C5491C /* Test.m in Sources */,
 				029D3B2321AC8B4F002C89F6 /* main.m in Sources */,
 				029D3B2A21AC8F70002C89F6 /* Pickup.m in Sources */,
 				02F4B19421B839500077D765 /* Information.m in Sources */,

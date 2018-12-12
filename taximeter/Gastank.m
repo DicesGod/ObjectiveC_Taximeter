@@ -26,7 +26,7 @@
             
         while(cost > *netincome)
         {
-            printf("You do not have enough money, please try again!\n");
+            printf("You do not have enough money, please try again or press 0 to quit!\n");
             scanf("%f",&refill);
             cost = price * refill;
             

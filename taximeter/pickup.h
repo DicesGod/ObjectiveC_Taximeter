@@ -7,6 +7,10 @@
     float ehour;
     float emin;
     float inispeed;
+    NSString *starhour;
+    NSString *endhour;
+    NSDate *startDate;
+    NSDate *endDate;
 }
 
 -(id)Menu;

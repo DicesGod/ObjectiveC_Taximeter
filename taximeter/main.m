@@ -57,15 +57,15 @@ int main(int argc, const char * argv[]) {
             
             if (userInput == 2)
             {
-//                if(netincome >=0 && fuellevel >0){
-//                    Gastank* gastank = [[Gastank alloc] init];
-//                    [gastank Fillup:&fuellevel :&netincome];
-//                    [info  Menu:netincome :fuellevel :mileage :totaltrip];
-//                }
-//                else
-//                {
-//                    printf("YOU DO NOT HAVE ENOUGH MONEY AND FUEL! PLEASE RESTART THE APPLICATION!");
-//                }
+                if(netincome >=0 && fuellevel >0){
+                    Gastank* gastank = [[Gastank alloc] init];
+                    [gastank Fillup:&fuellevel :&netincome];
+                    [info  Menu:netincome :fuellevel :mileage :totaltrip];
+                }
+                else
+                {
+                    printf("YOU DO NOT HAVE ENOUGH MONEY AND FUEL! PLEASE RESTART THE APPLICATION!");
+                }
 //                Test* test = [[Test alloc] init];
 //                [test Calculate:&netincome :&fuellevel :&mileage :&totaltrip];
             }
