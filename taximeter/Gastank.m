@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "Gastank.h"
 
-@implementation Gastank
+@implementation Gastank : NSObject 
 
 -(void)Fillup:(float *)fuellevel :(float *)netincome
 {
